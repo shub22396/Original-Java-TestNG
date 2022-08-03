@@ -2,14 +2,14 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
+# version: 2
+# jobs:
+#   build:
+#     docker:
+#       # specify the version you desire here
+#       - image: circleci/node:7.10
 
-      # Specify service dependencies here if necessary
+#       # Specify service dependencies here if necessary
 
     working_directory: ~/Original-Java-TestNG
 
@@ -66,4 +66,4 @@ jobs:
 #          key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: mvn clean test
+      - run: mvn clean -Dtest=SingleExecution test

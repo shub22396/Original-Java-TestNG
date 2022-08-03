@@ -30,17 +30,17 @@ jobs:
           name: "Executing tunnel binary"
           background: true
           command: |
-            ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}
+            ./LT --user shubhamr@lambdatest.com --key CCCCTfelp95y0WKq0MSKORBzWD7xpFGOTv5KlMTZ18qnAcGjId
             sleep 40
       
       - run: 
           name: "Setup custom environment variables"
           command: |
-            echo 'export LT_USERNAME="${LAMBDATEST_USERNAME}"' >> $BASH_ENV
+            echo 'export LT_USERNAME="shubhamr"' >> $BASH_ENV
       - run:
           name: "Setup custom environment variables"
           command: |
-            echo 'export LT_ACCESS_KEY="${LAMBDATEST_ACCESS_KEY}"' >> $BASH_ENV
+            echo 'export LT_ACCESS_KEY="CCCCTfelp95y0WKq0MSKORBzWD7xpFGOTv5KlMTZ18qnAcGjId"' >> $BASH_ENV
       - run: # test what branch we're on.
           name: "Here is the LT_Username : "
           command: echo ${LT_USERNAME}   
